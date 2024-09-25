@@ -2,13 +2,13 @@ package Filme;
 
 class Filme {
     // Atributos da classe Filme
-    private String nome;   // Nome do filme
+    private String nome; // Nome do filme
     private String genero; // Gênero do filme
-    private int duracao;   // Duração do filme em minutos
+    private int duracao; // Duração do filme em minutos
 
     // Construtor da classe Filme que inicializa os atributos
     public Filme(String nome, String genero, int duracao) {
-        this.nome = nome;   // Inicializa o nome
+        this.nome = nome; // Inicializa o nome
         this.genero = genero; // Inicializa o gênero
         this.duracao = duracao; // Inicializa a duração
     }
@@ -23,8 +23,8 @@ class Filme {
     // Método para definir o gênero do filme
     public void setGenero(String genero) {
         if (genero != null && (genero.equalsIgnoreCase("Romance") ||
-            genero.equalsIgnoreCase("Terror") ||
-            genero.equalsIgnoreCase("Comedia"))) {
+                genero.equalsIgnoreCase("Terror") ||
+                genero.equalsIgnoreCase("Comedia"))) {
             this.genero = genero; // Atualiza o gênero se for válido
         } else {
             System.out.println("Gênero inválido. Tente novamente."); // Mensagem de erro
@@ -52,7 +52,7 @@ class Filme {
     public String getDuracao() {
         int horas = duracao / 60; // Calcula as horas
         int min = duracao % 60; // Calcula os minutos restantes
-        return String.format(horas+":"+min); // Formata a saída como "hh:mm"
+        return String.format(horas + ":" + min); // Formata a saída como "hh:mm"
     }
 }
 
@@ -60,10 +60,10 @@ public class Cinema {
     public static void main(String[] args) {
         // Criando uma nova instância de Filme com dados diretos
         Filme filme = new Filme("Inception", "Terror", 148);
-        
+
         // Exibe os detalhes do filme
         System.out.println("\n\nNome do filme: " + filme.getNome() +
-        "\nGênero do filme: " + filme.getGenero() +
-        "\nDuração do filme: " + filme.getDuracao());
+                "\nGênero do filme: " + filme.getGenero() +
+                "\nDuração do filme: " + filme.getDuracao());
     }
 }
